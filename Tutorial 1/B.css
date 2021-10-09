@@ -1,0 +1,47 @@
+body {
+	background-color: seashell;
+}
+
+* {
+	font-family:"Times New Roman", Times, serif;
+}
+
+h1, h3, h4 {
+  color: #62466B;
+  margin-left:20px;
+}
+
+h1 {
+	font-size:36px;
+}
+
+h3 {
+	font-size:24px;
+}
+
+h4 {
+	font-size:20px;
+}
+
+p, table, ol, ul {
+	color: #45364B;
+	font-size:16px;
+	margin-left:40px;
+}
+
+table, th, td {
+	font-size:16px;
+	border:1px solid black;
+}
+
+a {
+	text-decoration:none;
+}
+
+ul {
+	list-style-type:square;
+}
+
+ol {
+	list-style-type:upper-roman;
+}

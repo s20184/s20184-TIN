@@ -1,5 +1,5 @@
 body {
-	background-color: mintcream;
+	background-color: black;
 }
 
 div {
@@ -9,10 +9,9 @@ div {
 	overflow:auto;
 }
 
-.div1 {
-}
-
-.div2 {
+p {
+	font-family: Verdana, Helvetica, sans-serif;
+	color:white;
 }
 
 .leftfloater {

@@ -12,18 +12,22 @@ h1, h3, h4 {
 }
 
 h1 {
+	font-style:oblique;
 	font-size:36px;
 }
 
 h3 {
+	font-style:italic;
 	font-size:24px;
 }
 
 h4 {
+	font-style:italic;
 	font-size:20px;
 }
 
 p, table, ol, ul {
+	font-style:normal;
 	color: #45364B;
 	font-size:16px;
 	margin-left:40px;

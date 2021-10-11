@@ -1,0 +1,26 @@
+body {
+	background-color: mintcream;
+}
+
+div {
+	float:left;
+	padding:5px;
+	width:45%;
+	overflow:auto;
+}
+
+.div1 {
+}
+
+.div2 {
+}
+
+.leftfloater {
+	padding-right:15px;
+	float:left;
+}
+
+.rightfloater {
+	padding-left:15px;
+	float:right;
+}

@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Assignment A and B (tutorial 2)</title>
+		<link rel="stylesheet" href="tut02-B.css">
+	</head>
+	<body>
+		<form>
+			<label for="username" class="mandatory">Username*:</label><br/>
+			<input type="text" name="username" id="username"/><br/>
+			
+			<label for="password" class="mandatory">Password*:</label><br/>
+			<input type="password" name="password" id="password"/>
+			
+			<br/><br/>
+			
+			<label for="dataSteal" class="other">Do you agree to us stealing your data?</label>
+			<input type="checkbox" name= "dataSteal" value= "yes"/>
+			
+			<br/><br/>
+			
+			<label for="species" class="mandatory">Species*:</label></br>
+			<input type="radio" name= "species" value="human"/><label for="human" class="option">Human</label>
+			<input type="radio" name= "species" value="goblin"/><label for="goblin" class="option">Goblin</label>
+			<input type="radio" name= "species" value= "other"/><label for="other-species" class="option">Other</label>
+			
+			<br/><br/>
+			
+			<label for="placeOfBirth" class="mandatory">Place of birth*:</label><br/>
+			<select name="placeOfBirth">
+			<option value="treetop">Ontop of a tree</option>
+			<option value="burrow">Inside of a burrow</option>
+			<option value="beached">Washed upon the shore</option>
+			<option value="other">Other</option>
+			</select>
+			
+			<br/><br/>
+			
+			<label for="comment" class="other">Do you have any comments?</label><br/>
+			<textarea name="comment" rows="5" cols="20"></textarea>
+			
+			<br/><br/>
+			
+			<input type="reset" value="Reset"> <input type="submit" value="Submit"> 
+
+		</form>
+	</body>
+</html>

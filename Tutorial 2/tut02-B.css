@@ -1,0 +1,16 @@
+.mandatory {
+	color:red;
+	font-weight:bold;
+}
+
+.other {
+	color:dimgray;
+}
+
+.option, button, input, select, textarea {
+	font-style:italic;
+	font-size:14px;
+}
+
+
+

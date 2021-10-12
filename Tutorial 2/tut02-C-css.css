@@ -1,0 +1,29 @@
+body {
+	background:#3A4454;
+}
+
+.contentArea {
+	margin-left:30%;
+	margin-right:30%;
+	width:40%;
+	padding:5%;
+	background:#53687E;
+}
+
+.banner {
+	width:100%;
+	border-style:dotted;
+	border-color:#3A4454;
+}
+
+p {
+	color:#F5DDDD;
+}
+
+a:link {
+	color:#C2B2B4;
+}
+
+a:hover {
+	color:#EA7AF4;
+}

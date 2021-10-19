@@ -6,6 +6,8 @@
 <meta charset="utf-8">
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Caladea:ital@0;1&family=Cambo&display=swap');
+
 #banner {
 	border-radius: 20%;
 	display: block;
@@ -17,8 +19,6 @@
 
 @media all and (min-width: 800px){
 	body {
-		background-color: yellow;
-		margin: 40px;
 		display: grid;
 		grid-gap: 10px;
 		grid-template-columns: 1fr 2fr 2fr;
@@ -27,15 +27,10 @@
 							"gallery article article"
 							"footer footer footer"
 	}
-	#gallery {
-		border-right: dotted;
-	}
 }
 
 @media all and (max-width: 799px) {
 	body {
-		background-color: yellow;
-		margin: 40px;
 		display: grid;
 		grid-gap: 10px;
 		grid-template-columns: auto;
@@ -45,10 +40,11 @@
 							"gallery"
 							"footer"
 	}
-	
-	#gallery {
-		border-top: dotted;
-	}
+}
+
+body {
+	background-color: #F9F4F5;
+	margin: 40px;
 }
 
 header {
@@ -57,48 +53,71 @@ header {
 }
 
 footer {
-	border-top:solid;
+	border-top:solid 1px;
 	grid-area:footer;
 	text-align: center;
 }
 
 #article {
-	padding: 15px;
 	grid-area: article;
 	column-width: 350px;
-	background-color: red;
+	background-color: #fcb280;
+	border-radius: 25px;
 }
 
 #gallery {
 	grid-area: gallery;
-	padding:15px;
-	background-color: blue;
+	background-color: #502F4C;
+	border-radius: 25px;
+}
+
+aside {
+	text-shadow: 1px 1px 3px #502F4C, 0 0 2px white;
+	float:left;
+	font-size:20px;
+	font-style:oblique;
 }
 
 #article img {
 	float: right;
-	padding: 15px;
 	max-width:200px;
-	max-height:300px;
-}
-
-aside {
-	float:left;
-	font-size:20px;
-	font-style:oblique;
-	padding: 15px;
+	max-height:200px;
 }
 
 #gallery img {
+	border:solid white;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	max-width:410px;
 	max-height:219px;	
 }
 
+#article, #gallery, aside, #article img {
+	padding: 15px;
+}
+
 p {
+	color: black;
 	text-align: justify;
 }
 
+figcaption {
+	color: #F9F4F5;
+	text-align: center;
+}
 
+p, figcaption, h3 {
+    font-family: 'Cambo', serif;
+}
+
+header, footer, aside {
+    font-family: 'Caladea', serif;
+}
+
+a:hover {
+	color: #fcb280;
+}
 </style>
 
 </head>
@@ -113,7 +132,7 @@ narrative</h1>
 
 <section id="article">
 <h3>1. Rushdie and textual narrative</h3>
-
+<img src="https://media.istockphoto.com/photos/modern-conceptual-art-poster-with-ancient-statue-of-bust-of-venus-and-picture-id1162406991" alt="Vaporwave Venus">
 <p>In the works of Rushdie, a predominant concept is the distinction between
 destruction and creation. Any number of theories concerning a mythopoetical
 whole may be discovered. But the subject is interpolated into a surrealism that
@@ -166,7 +185,7 @@ said that Foucault promotes the use of the neoconceptualist paradigm of
 narrative to deconstruct and read society.</p>
 
 <h3>3. Madonna and postsemantic narrative</h3>
-<img src="https://media.istockphoto.com/photos/virgin-statue-in-barcelona-cathedral-picture-id157635928">
+<img src="https://media.istockphoto.com/photos/virgin-statue-in-barcelona-cathedral-picture-id157635928" alt="Madonna statue">
 <p>In the works of Madonna, a predominant concept is the concept of cultural
 art. Therefore, the main theme of the works of Madonna is not
 dedeconstructivism as such, but postdedeconstructivism. Debord’s critique of
@@ -184,16 +203,34 @@ read truth.</p>
 </section>
 
 <section id="gallery">
-<img src="https://media.istockphoto.com/photos/depressive-man-picture-id1185422927">
-<img src="https://media.istockphoto.com/photos/sad-young-woman-sitting-on-the-window-watching-out-picture-id1130052240">
-<img src="https://media.istockphoto.com/photos/social-distancing-during-covid19-pandemic-picture-id1214516643">
-<img src="https://media.istockphoto.com/photos/cute-small-dog-standing-on-two-legs-and-looking-away-by-the-window-picture-id1213207280">
-<img src="https://media.istockphoto.com/photos/bored-cat-hanging-on-edge-of-desk-picture-id510616362">
-<img src="https://media.istockphoto.com/photos/young-sad-mad-sitting-in-regret-picture-id638378146">
+<figure>
+<img src="https://media.istockphoto.com/photos/depressive-man-picture-id1185422927" alt="Depressive man">
+<figcaption>Consensuses of absurdity</figcaption>
+</figure>
+<figure>
+<img src="https://media.istockphoto.com/photos/sad-young-woman-sitting-on-the-window-watching-out-picture-id1130052240" alt="Sad young woman by a window">
+<figcaption>Postdesituationism</figcaption>
+</figure>
+<figure>
+<img src="https://media.istockphoto.com/photos/social-distancing-during-covid19-pandemic-picture-id1214516643" alt="Woman suffering from social distancing">
+<figcaption>Not, in fact, discourse, but prediscourse</figcaption>
+</figure>
+<figure>
+<img src="https://media.istockphoto.com/photos/cute-small-dog-standing-on-two-legs-and-looking-away-by-the-window-picture-id1213207280" alt="Dog looking out a window">
+<figcaption>The difference between class and society</figcaption>
+</figure>
+<figure>
+<img src="https://media.istockphoto.com/photos/bored-cat-hanging-on-edge-of-desk-picture-id510616362" alt="Bored cat hanging on edge of desk">
+<figcaption>Not discourse as such, but neodiscourse</figcaption>
+</figure>
+<figure>
+<img src="https://media.istockphoto.com/photos/young-sad-mad-sitting-in-regret-picture-id638378146" alt="Young man sitting in regret">
+<figcaption>Consciousness is part of the futility of truth</figcaption>
+</figure>
 </section>
 
 <footer>
-<h3>The essay you have just seen is completely meaningless and was randomly generated by the Postmodernism Generator.</h3>
+<h3>The essay you have just seen is completely meaningless and was randomly generated by the <a href="https://www.elsewhere.org/pomo/">Postmodernism Generator</a>.</h3>
 </footer>
 
 </body>

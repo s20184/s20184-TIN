@@ -10,7 +10,7 @@ var Student = function(firstName, lastName, id, grades) {
                 return this.firstName + " " + this.lastName;
             },
             set: function(fullName){
-                words = fullName.toString().split(' ');
+                var words = fullName.toString().split(' ');
                 this.firstName = words[0] || "";
                 this.lastName = words[1] || "";
             }
@@ -28,7 +28,7 @@ var Student = function(firstName, lastName, id, grades) {
 
     this.gradeAvg = function(){
         let sum = this.grades.reduce((a,b)=>a+b);
-        let avg = sum/grades.length;
+        let avg = sum/this.grades.length;
         return avg;
     }
 }

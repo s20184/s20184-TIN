@@ -4,7 +4,7 @@ var myCat = {
     clawLength: 10,
 
     meow () {
-        console.log(this.name+" meows.")
+        console.log(this.name+" meows.");
     },
 
     scratch () {
@@ -16,7 +16,7 @@ var myCat = {
             "debilitating",
             "fatal"];
         let result = scratchResults[Math.floor(Math.random()*(scratchResults.length))];
-        console.log(`${this.name} scratches with a ${result} result.`)
+        console.log(`${this.name} scratches with a ${result} result.`);
     },
 
     haveZoomies (hours) {

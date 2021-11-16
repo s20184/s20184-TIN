@@ -3,7 +3,7 @@ Student.prototype = {
     lastName: "Type",
     id: 9999999999999,
     courses: ["art","music","philosophy","debauchery"]
-}
+};
 
 function Student(firstName, lastName, id){
     this.firstName = firstName;

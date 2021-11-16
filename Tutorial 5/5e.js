@@ -1,14 +1,15 @@
 class Student {
     constructor(firstName, lastName, id, grades) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.id = id;
-    this.grades = grades;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.id = id;
+        this.grades = grades;
     }
 
     get fullName(){
-        return this.firstName + " " + this.lastName
+        return this.firstName + " " + this.lastName;
     }
+
     set fullName(fullName){
         var words = fullName.toString().split(' ');
         this.firstName = words[0] || "";

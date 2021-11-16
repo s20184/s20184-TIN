@@ -24,14 +24,14 @@ var Student = function(firstName, lastName, id, grades) {
 
     this.printName = function(){
         console.log(`Student ${this.firstName} ${this.lastName}`);
-    }
+    };
 
     this.gradeAvg = function(){
         let sum = this.grades.reduce((a,b)=>a+b);
         let avg = sum/this.grades.length;
         return avg;
-    }
-}
+    };
+};
 
 let myStudent = new Student("Debbie","Downer",1,[4,5,3,4,5,4,3,5]);
 myStudent.fullName = "Sekhema Deshret";

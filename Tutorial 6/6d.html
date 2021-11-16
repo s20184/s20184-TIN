@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Add row to table</title>
+  <style>
+      table, th, td {
+        border: 1px solid black;
+        padding: 5px;
+    }
+  </style>
+</head>
+<body>
+    <form id="myForm" onsubmit="return (addRow())">
+    <label for="product" class="mandatory" id="productLabel">Product:</label><br/>
+    <input type="text" name="product" id="product"/><br/>    
+
+    <label for="lastName" class="mandatory" id="amountLabel">Amount:</label><br/>
+    <input type="text" name="amount" id="amount"/>
+
+    <br/><br/>
+    
+    <button type="button" onclick="addRow()">Add to list</button>
+    </form>
+
+    <br/><br/>
+
+    <h3>Shopping list</h3>
+    <table id="myTable">
+        <tr>
+            <th>Product</th>
+            <th>Amount</th>
+          </tr>
+          <tr>
+            <td>Pesto</td>
+            <td>2 jars</td>
+          </tr>
+          <tr>
+            <td>Lemon juice</td>
+            <td>1 carton</td>
+          </tr>
+    </table>
+
+	<script>
+        function addRow(){
+            var table = document.getElementById("myTable");
+            var maxRow = table.getElementsByTagName("tr").length;
+            var row = table.insertRow(maxRow);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = document.getElementById("product").value;
+            cell2.innerHTML = document.getElementById("amount").value;
+        }
+	</script>
+</body>
+</html>

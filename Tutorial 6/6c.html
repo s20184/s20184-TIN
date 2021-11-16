@@ -38,8 +38,8 @@
                     incorrectStyle(emailLabel);
                 } else {
                     correctStyle(emailLabel);
-                };
-            };
+                }
+            }
 
             if(age === ""){
                 isValid = false;
@@ -51,22 +51,22 @@
                     incorrectStyle(ageLabel);
                 } else {
                     correctStyle(ageLabel);
-                };
-            };
+                }
+            }
 
             console.log(`Validation result: ${isValid}`);
             return isValid;
-        };
+        }
 
         function correctStyle(label){
-            label.style.color = "black";
+            label.style.color = "green";
             label.style.fontWeight = "normal";
         }
 
         function incorrectStyle(label){
             label.style.color = "red";
             label.style.fontWeight = "bold";
-        };
+        }
 	</script>
 </body>
 </html>

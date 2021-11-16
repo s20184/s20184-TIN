@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Validate the contents of a form</title>
+</head>
+<body>
+    <form id="myForm" onsubmit="return(validateForm())">
+    <label for="email" class="mandatory" id="emailLabel">E-mail:</label><br/>
+    <input type="text" name="email" id="email"/><br/>    
+
+    <label for="age" class="mandatory" id="ageLabel">Age (years):</label><br/>
+    <input type="text" name="age" id="age"/>
+
+    <br/><br/>
+    
+    <input type="submit" value="Submit"> 
+    </form>
+
+	<script>
+        function validateForm(){
+            let isValid = true;
+            var myForm = document.forms[0];
+
+            var email = myForm.email.value;
+            var age = myForm.age.value;
+            var emailLabel = document.getElementById("emailLabel");
+            var ageLabel = document.getElementById("ageLabel");
+
+            if(email === ""){
+                isValid = false;
+                incorrectStyle(emailLabel);
+            } else {
+                var mailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if(!(email.match(mailRegex))) {
+                    isValid = false;
+                    incorrectStyle(emailLabel);
+                } else {
+                    correctStyle(emailLabel);
+                };
+            };
+
+            if(age === ""){
+                isValid = false;
+                incorrectStyle(ageLabel);
+            } else {
+                var ageRegex = /^\d{1,3}$/;
+                if(!(age.match(ageRegex))) {
+                    isValid = false;
+                    incorrectStyle(ageLabel);
+                } else {
+                    correctStyle(ageLabel);
+                };
+            };
+
+            console.log(`Validation result: ${isValid}`);
+            return isValid;
+        };
+
+        function correctStyle(label){
+            label.style.color = "black";
+            label.style.fontWeight = "normal";
+        }
+
+        function incorrectStyle(label){
+            label.style.color = "red";
+            label.style.fontWeight = "bold";
+        };
+	</script>
+</body>
+</html>

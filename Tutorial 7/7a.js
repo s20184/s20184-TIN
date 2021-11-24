@@ -7,30 +7,68 @@ var server = http.createServer(function (request, response) {
     var stringA = query.a;
     var stringB = query.b;
 
-    if(stringA === "" || stringB === "") {
-        response.writeHead(400, {"Content-Type": "text/plain"});
-        response.end("Some parameters are missing!");
+    if(!(arePresent(operation, stringA, stringB))) {
+        response.writeHead(400, {"Content-Type": "text/html"});
+        response.write("<html><body>");
+        response.write("<p>Some parameters are missing!</p>");
+        response.write("<p>Necessary parameters: operation, a, b</p>");
+        response.end("</html></body>");
         return;
+    }
+
+    if(!(isCorrectOperation(operation))) {
+        response.writeHead(400, {"Content-Type": "text/html"});
+        response.write("<html><body>");
+        response.write("<p>Unsupported operation type!</p>");
+        response.write("<p>Supported operations: add, sub, mul, div</p>");
+        response.end("</html></body>");
     }
 
     var numberA = parseFloat(stringA, 10);
     var numberB = parseFloat(stringB, 10);
 
-    if(isNaN(numberA) || isNaN(numberB)) {
-        response.writeHead(400, {"Content-Type": "text/plain"});
-        response.end("Wrong parameter types!");
+    if(!(areNumbers(numberA, numberB))) {
+        response.writeHead(400, {"Content-Type": "text/html"});
+        response.write("<html><body>");
+        response.write("<p>Wrong parameter types!</p>");
+        response.write("<p>a and b have to be numbers.</p>");
+        response.end("</html></body>");
         return;
     }
 
     var result = getResult(operation, numberA, numberB);
 
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end(`operation: ${operation}\n
-    a=${numberA}\t
-    b=${numberB}\n
-    result=${result}`);
+    response.writeHead(200, {"Content-Type": "text/html"});
+    response.write("<html><body>");
+    response.write(`<p>Operation: ${operation}</p>`);
+    response.write(`<p>a=${numberA}; b=${numberB}</p>`);
+    response.write(`<p>result=${result}</p>`);
+    response.end("</html></body>");
 
 }).listen(8080, '127.0.0.1');
+
+function isCorrectOperation(operation){
+    return (operation === "add"
+    || operation === "sub" 
+    || operation === "mul" 
+    || operation === "div");
+}
+
+
+function arePresent(...arguments){
+    for(let i = 0; i < arguments.length; i++){
+        if(arguments[i] === undefined) return false;
+    }
+    return true;
+}
+
+function areNumbers(...arguments){
+    for(let i = 0; i < arguments.length; i++){
+        if(isNaN(arguments[i])) return false;
+    }
+    return true;
+}
+
 
 function getResult(operation, a, b){
     if (operation === "add") {
@@ -41,7 +79,7 @@ function getResult(operation, a, b){
         return getMul(a,b);
     } else if (operation === "div") {
         return getDiv(a,b);
-    } else throw new Error("Whoops");
+    } else throw new Error("Unexpected error while retrieving result");
 }
 
 function getAdd(a,b){

@@ -22,6 +22,7 @@ var server = http.createServer(function (request, response) {
         response.write("<p>Unsupported operation type!</p>");
         response.write("<p>Supported operations: add, sub, mul, div</p>");
         response.end("</html></body>");
+        return;
     }
 
     var numberA = parseFloat(stringA, 10);
@@ -44,7 +45,6 @@ var server = http.createServer(function (request, response) {
     response.write(`<p>a=${numberA}; b=${numberB}</p>`);
     response.write(`<p>result=${result}</p>`);
     response.end("</html></body>");
-
 }).listen(8080, '127.0.0.1');
 
 function isCorrectOperation(operation){
@@ -53,7 +53,6 @@ function isCorrectOperation(operation){
     || operation === "mul" 
     || operation === "div");
 }
-
 
 function arePresent(...arguments){
     for(let i = 0; i < arguments.length; i++){
@@ -68,7 +67,6 @@ function areNumbers(...arguments){
     }
     return true;
 }
-
 
 function getResult(operation, a, b){
     if (operation === "add") {

@@ -3,16 +3,19 @@
 	<title>Form!</title>
 </head>
 <body>
-<form action="/formdata" method="POST">
-	<label for="username" id="usernameLabel">Username:</label><br/>
-	<input type="text" placeholder="Your username here" name="username" id="username"/><br/>    
+	<form action="/formdata" method="POST">
+		<label for="username" id="usernameLabel">Username:</label><br/>
+		<input type="text" placeholder="Your username here" name="username" id="username"/><br/>    
 
-	<label for="email"  id="amountLabel">E-mail:</label><br/>
-	<input type="text" placeholder="e.g. john@mail.com" name="email" id="email"/>
-			
-	<br/><br/>
-			
-	<input type="submit" value="Submit">
-</form>
+		<label for="email"  id="emailLabel">E-mail:</label><br/>
+		<input type="email" placeholder="e.g. john@mail.com" name="email" id="email"/><br/>
+
+		<label for="age"  id="ageLabel">Age:</label><br/>
+		<input type="number" name="age" id="age"/><br/>
+				
+		<br/>
+				
+		<input type="submit" value="Submit">
+	</form>
 </body>
 </html>

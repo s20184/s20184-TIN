@@ -1,0 +1,26 @@
+{
+  "name": "tutorial-9",
+  "version": "1.0.0",
+  "description": "AJAX intro app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "s20184-TIN"
+  },
+  "keywords": [
+    "AJAX",
+    "json",
+    "Express",
+    "REST?"
+  ],
+  "author": "Jolanta Grabowska",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}

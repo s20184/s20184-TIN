@@ -8,6 +8,14 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Headers', '*');
+    next();
+  });
+  app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
 
 app.post('/calculate', (req,res) => {
     var a = parseFloat(req.body.a, 10);
@@ -19,13 +27,13 @@ app.post('/calculate', (req,res) => {
 });
 
 function calculate(a,b,operation) {
-    if(operation === "add") {
+    if(operation == "add") {
         return a+b;
-    } else if (operation === "sub") {
+    } else if (operation == "sub") {
         return a-b;
-    } else if (operation === "mul") {
+    } else if (operation == "mul") {
         return a*b;
-    } else if (operation === "div") {
+    } else if (operation == "div") {
         return a/b;
     } else return "You must have entered a wrong operation.";
 }

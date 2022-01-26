@@ -1,9 +1,13 @@
 {
   "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.3",
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "sequelize": "^6.14.1"
   },
   "name": "project",
@@ -24,5 +28,9 @@
     "mysql"
   ],
   "author": "Jolanta Grabowska",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.67.0",
+    "webpack-dev-server": "^4.7.3"
+  }
 }
